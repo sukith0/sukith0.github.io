@@ -1,0 +1,666 @@
+@font-face {
+    font-family: "yoyo";
+    src: url("../Asset/FUTRFW.TTF") format("truetype");
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "coolface";
+    src: url("../Asset/ModernSans-Light.otf") format("opentype");
+    font-display: swap;
+}
+
+
+
+
+:root {
+
+    --noir: rgb(0, 0, 0);
+    --blanc: rgb(255, 255, 255);
+    --gris-fond: rgb(248, 248, 248);
+    --gris-bord: rgba(37, 37, 37, 0.283);
+    --gris-texte: rgba(20, 20, 20, 0.612);
+    --gris-trait: rgb(143, 143, 143);
+
+    --police-titre: "yoyo", "Trebuchet MS", sans-serif;
+    --police-texte: "coolface", "Segoe UI", sans-serif;
+
+    --pas-1: 10px;
+    --pas-2: 20px;
+    --pas-3: 40px;
+    --pas-4: 60px;
+
+    --taille-marque: clamp(15px, 4.2vw, 20px);
+    --taille-titre: clamp(18px, 5.6vw, 40px);
+    --taille-sous-titre: clamp(18px, 3vw, 25px);
+    --taille-texte: 20px;
+    --taille-petit: 16px;
+
+    --interligne-titre: 1.2;
+    --interligne-texte: 1.6;
+
+    --hauteur-entete: 48px;
+    --largeur-max: 1100px;
+    --largeur-texte: 65ch;
+    --rayon: 4px;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    width: 100%;
+    padding-top: var(--hauteur-entete);
+    background-color: var(--blanc);
+    font-family: var(--police-texte);
+    font-size: var(--taille-texte);
+    line-height: var(--interligne-texte);
+    color: var(--noir);
+
+}
+
+
+img {
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+h1,
+h2,
+h3,
+.bouton {
+
+    overflow-wrap: anywhere;
+    hyphens: auto;
+
+}
+
+
+a:focus-visible {
+
+    outline: 2px solid var(--noir);
+    outline-offset: 3px;
+
+}
+
+
+
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: var(--pas-1);
+    width: 100%;
+    height: var(--hauteur-entete);
+    padding: 0 var(--pas-2);
+    background-color: var(--noir);
+    background-size: cover;
+    font-size: var(--taille-petit);
+    color: var(--blanc);
+    font-family: var(--police-titre);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+
+
+#projet {
+
+    font-size: var(--taille-marque);
+    line-height: var(--interligne-titre);
+    white-space: nowrap;
+
+}
+
+
+#loupe {
+
+    margin-left: auto;
+    flex-shrink: 0;
+
+}
+
+
+#menu {
+
+    flex-shrink: 0;
+
+}
+
+
+
+
+nav {
+
+    width: 100%;
+    padding: var(--pas-3) var(--pas-2);
+    background-color: var(--blanc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--pas-3);
+
+}
+
+
+.head {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-1);
+
+}
+
+
+#logo {
+
+    width: 100px;
+    height: auto;
+
+}
+
+
+#title2 {
+
+    font-family: var(--police-titre);
+    font-size: var(--taille-titre);
+    line-height: var(--interligne-titre);
+    text-align: center;
+
+}
+
+
+.button {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--pas-2);
+    width: 100%;
+    max-width: var(--largeur-max);
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+.bouton {
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    padding: var(--pas-1) var(--pas-2);
+    border: var(--noir) 1px solid;
+    border-radius: var(--rayon);
+    background-color: var(--noir);
+    font-family: var(--police-titre);
+    font-size: var(--taille-petit);
+    text-decoration: none;
+    text-align: center;
+    color: var(--blanc);
+    cursor: pointer;
+
+}
+
+
+.bouton:hover,
+.bouton[aria-current="page"] {
+
+    background-color: var(--blanc);
+    color: var(--noir);
+
+}
+
+
+
+
+main {
+
+    width: 100%;
+    background-color: var(--blanc);
+
+}
+
+
+.bloc {
+
+    width: 100%;
+    padding: var(--pas-3) var(--pas-2);
+    margin-top: var(--pas-4);
+    border: solid;
+    border-width: 2px;
+    border-color: var(--gris-bord);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--pas-2);
+    background-color: var(--gris-fond);
+
+}
+
+
+.titre-bloc {
+
+    font-family: var(--police-titre);
+    font-size: var(--taille-titre);
+    line-height: var(--interligne-titre);
+    text-align: center;
+
+}
+
+
+.texte-bloc {
+
+    max-width: var(--largeur-texte);
+    font-family: var(--police-texte);
+    font-size: var(--taille-sous-titre);
+    line-height: var(--interligne-texte);
+    text-align: center;
+    color: var(--gris-texte);
+
+}
+
+
+
+
+.presentation {
+
+    font-family: var(--police-titre);
+
+}
+
+
+#pres2 {
+
+    max-width: var(--largeur-texte);
+    font-family: var(--police-texte);
+    font-size: var(--taille-texte);
+    line-height: var(--interligne-texte);
+    text-align: center;
+    color: var(--gris-texte);
+
+}
+
+
+#moi {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--pas-2);
+    font-size: var(--taille-petit);
+
+}
+
+
+#barre {
+
+    width: 2px;
+    height: 60px;
+    border: solid;
+    border-radius: 10%;
+    border-color: var(--gris-trait);
+    border-width: 1px;
+
+}
+
+
+#photo {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+
+
+
+#pic1 {
+
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+
+}
+
+
+
+
+.lignes {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-2);
+    width: 100%;
+    max-width: var(--largeur-max);
+
+}
+
+
+.ligne {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--pas-1) var(--pas-2);
+    width: 100%;
+    padding: var(--pas-2);
+    border: solid 1px var(--gris-bord);
+    border-radius: var(--rayon);
+    background-color: var(--blanc);
+
+}
+
+
+.ligne-date {
+
+    flex: 0 1 auto;
+    min-width: 200px;
+    max-width: 100%;
+    font-family: var(--police-titre);
+    font-size: var(--taille-petit);
+    color: var(--gris-texte);
+
+}
+
+
+.ligne-corps {
+
+    flex: 1 1 260px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-1);
+
+}
+
+
+.ligne-titre {
+
+    font-family: var(--police-titre);
+    font-size: var(--taille-texte);
+    line-height: var(--interligne-titre);
+    overflow-wrap: anywhere;
+
+}
+
+
+.ligne-texte {
+
+    font-family: var(--police-texte);
+    font-size: var(--taille-petit);
+    line-height: var(--interligne-texte);
+    color: var(--gris-texte);
+
+}
+
+
+.ligne-titre a,
+.ligne-texte a,
+.carte-texte a {
+
+    color: inherit;
+
+}
+
+
+.puces {
+
+    padding-left: var(--pas-2);
+    font-family: var(--police-texte);
+    font-size: var(--taille-petit);
+    line-height: var(--interligne-texte);
+    color: var(--gris-texte);
+
+}
+
+
+
+
+.cartes {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--pas-2);
+    width: 100%;
+    max-width: var(--largeur-max);
+
+}
+
+
+.carte {
+
+    flex: 1 1 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-1);
+    padding: var(--pas-2);
+    border: solid 1px var(--gris-bord);
+    border-radius: var(--rayon);
+    background-color: var(--blanc);
+
+}
+
+
+.carte-image {
+
+    width: 100%;
+    height: auto;
+    border-radius: var(--rayon);
+
+}
+
+
+.carte-titre {
+
+    font-family: var(--police-titre);
+    font-size: var(--taille-texte);
+    line-height: var(--interligne-titre);
+
+}
+
+
+.carte-texte {
+
+    font-family: var(--police-texte);
+    font-size: var(--taille-petit);
+    line-height: var(--interligne-texte);
+    color: var(--gris-texte);
+
+}
+
+
+
+
+.formulaire {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-2);
+    width: 100%;
+    max-width: var(--largeur-texte);
+
+}
+
+
+.champ {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--pas-1);
+
+}
+
+
+.champ label {
+
+    font-family: var(--police-titre);
+    font-size: var(--taille-petit);
+
+}
+
+
+.champ input,
+.champ textarea {
+
+    width: 100%;
+    padding: var(--pas-1);
+    border: solid 1px var(--gris-bord);
+    border-radius: var(--rayon);
+    background-color: var(--blanc);
+    font-family: var(--police-texte);
+    font-size: var(--taille-petit);
+    line-height: var(--interligne-texte);
+    color: var(--noir);
+
+}
+
+
+.champ input:focus-visible,
+.champ textarea:focus-visible {
+
+    outline: 2px solid var(--noir);
+    outline-offset: 2px;
+
+}
+
+
+.champ textarea {
+
+    min-height: 160px;
+    resize: vertical;
+
+}
+
+
+.formulaire .bouton {
+
+    align-self: start;
+
+}
+
+
+
+
+footer {
+
+    width: 100%;
+    padding: var(--pas-3) var(--pas-2);
+    margin-top: var(--pas-4);
+    background-color: var(--noir);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--pas-1);
+    font-family: var(--police-texte);
+    font-size: var(--taille-petit);
+    color: var(--blanc);
+
+}
+
+
+footer a {
+
+    color: var(--blanc);
+
+}
+
+
+footer .bouton {
+
+    border-color: var(--blanc);
+
+}
+
+
+footer a:focus-visible {
+
+    outline-color: var(--blanc);
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .bloc {
+
+        padding: var(--pas-3) var(--pas-1);
+
+    }
+
+    .ligne-date {
+
+        min-width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    :root {
+
+        --pas-4: 40px;
+
+    }
+
+    nav {
+
+        padding: var(--pas-2) var(--pas-1);
+        gap: var(--pas-2);
+
+    }
+
+    .bouton {
+
+        flex: 1 1 100%;
+        min-width: 0;
+
+    }
+
+    .carte {
+
+        max-width: 100%;
+
+    }
+
+}
